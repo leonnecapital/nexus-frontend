@@ -1,0 +1,346 @@
+<div class="min-h-screen bg-gray-100 p-4 md:p-8 font-inter">
+    <!-- Cabeçalho -->
+    <header class="mb-6">
+        <h1 class="text-3xl font-bold text-gray-800">Sistema de Consultoria Financeira</h1>
+        <p class="text-gray-600">Visão geral das finanças do cliente.</p>
+    </header>
+
+    <!-- Navegação por Abas -->
+    <nav class="flex flex-wrap border-b border-gray-300 mb-6">
+        @for (tab of tabs; track tab.id) {
+        <button (click)="selectTab(tab.id)"
+            [class]="selectedTab() === tab.id ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+            class="py-3 px-4 md:px-6 font-semibold border-b-2 focus:outline-none transition-colors duration-200">
+            {{ tab.label }}
+        </button>
+        }
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+        @switch (selectedTab()) {
+
+        <!-- ========== Aba Dashboard ========== -->
+        @case ('dashboard') {
+        <section>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">Dashboard</h2>
+
+            <!-- Cartões de Resumo (Removido 'pt-BR' dos pipes) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="bg-blue-50 p-5 rounded-lg shadow-md">
+                    <h3 class="text-sm font-semibold text-blue-800 uppercase">Patrimônio Líquido</h3>
+                    <p class="text-3xl font-bold text-blue-900">{{ patrimonioLiquido() | number:'1.2-2' }}</p>
+                </div>
+                <div class="bg-green-50 p-5 rounded-lg shadow-md">
+                    <h3 class="text-sm font-semibold text-green-800 uppercase">Resultado Mensal</h3>
+                    <p class="text-3xl font-bold text-green-900">{{ resultadoMensal() | number:'1.2-2' }}</p>
+                </div>
+                <div class="bg-indigo-50 p-5 rounded-lg shadow-md">
+                    <h3 class="text-sm font-semibold text-indigo-800 uppercase">Total Investido</h3>
+                    <p class="text-3xl font-bold text-indigo-900">{{ totalInvestido() | number:'1.2-2' }}</p>
+                </div>
+                <div class="bg-red-50 p-5 rounded-lg shadow-md">
+                    <h3 class="text-sm font-semibold text-red-800 uppercase">Total Dívidas</h3>
+                    <p class="text-3xl font-bold text-red-900">{{ totalDividas() | number:'1.2-2' }}</p>
+                </div>
+            </div>
+
+            <!-- Gráficos (Placeholders) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md min-h-[300px] flex items-center justify-center">
+                    <p class="text-gray-500">[Gráfico: Composição das Despesas]</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md min-h-[300px] flex items-center justify-center">
+                    <p class="text-gray-500">[Gráfico: Evolução do Patrimônio]</p>
+                </div>
+            </div>
+        </section>
+        }
+
+        <!-- ========== Aba Orçamento Mensal ========== -->
+        @case ('orcamento') {
+        <section>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">Orçamento Mensal</h2>
+
+            <!-- Seção Receitas -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-green-700 mb-4">Receitas</h3>
+                <div class="overflow-x-auto shadow-md rounded-lg">
+                    <table class="w-full min-w-[600px] table-auto">
+                        <thead class="bg-gray-100 text-left text-sm font-semibold text-gray-600 uppercase">
+                            <tr>
+                                <th class="p-4">Categoria</th>
+                                <th class="p-4">Previsto (R$)</th>
+                                <th class="p-4">Realizado (R$)</th>
+                                <th class="p-4">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            @for (item of receitas(); track item.categoria) {
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4">{{ item.categoria }}</td>
+                                <td class="p-4">{{ item.previsto | number:'1.2-2' }}</td>
+                                <td class="p-4">{{ item.realizado | number:'1.2-2' }}</td>
+                                <td class="p-4"><button class="text-blue-600 hover:text-blue-800">Editar</button></td>
+                            </tr>
+                            }
+                            <tr class="bg-gray-100 font-bold">
+                                <td class="p-4">TOTAL RECEITAS</td>
+                                <td class="p-4">{{ totalReceitasPrevisto() | number:'1.2-2' }}</td>
+                                <td class="p-4">{{ totalReceitas() | number:'1.2-2' }}</td>
+                                <td class="p-4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Seção Despesas -->
+            <div>
+                <h3 class="text-xl font-semibold text-red-700 mb-4">Despesas</h3>
+                <div class="overflow-x-auto shadow-md rounded-lg">
+                    <table class="w-full min-w-[700px] table-auto">
+                        <thead class="bg-gray-100 text-left text-sm font-semibold text-gray-600 uppercase">
+                            <tr>
+                                <th class="p-4">Categoria</th>
+                                <th class="p-4">Subcategoria</th>
+                                <th class="p-4">Previsto (R$)</th>
+                                <th class="p-4">Realizado (R$)</th>
+                                <th class="p-4">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            @for (item of despesas(); track $index) {
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4">{{ item.categoria }}</td>
+                                <td class="p-4">{{ item.subcategoria }}</td>
+                                <td class="p-4">{{ item.previsto | number:'1.2-2' }}</td>
+                                <td class="p-4">{{ item.realizado | number:'1.2-2' }}</td>
+                                <td class="p-4"><button class="text-blue-600 hover:text-blue-800">Editar</button></td>
+                            </tr>
+                            }
+                            <tr class="bg-gray-100 font-bold">
+                                <td class="p-4" colspan="2">TOTAL DESPESAS</td>
+                                <td class="p-4">{{ totalDespesasPrevisto() | number:'1.2-2' }}</td>
+                                <td class="p-4">{{ totalDespesas() | number:'1.2-2' }}</td>
+                                <td class="p-4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Resumo do Mês -->
+            <div class="mt-8 bg-gray-50 p-6 rounded-lg shadow-inner">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Resumo do Mês</h3>
+                <div class="flex justify-around flex-wrap gap-4">
+                    <div class="text-center">
+                        <span class="text-sm text-gray-600">Total Receitas</span>
+                        <p class="text-2xl font-bold text-green-600">{{ totalReceitas() | number:'1.2-2' }}</p>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-sm text-gray-600">Total Despesas</span>
+                        <p class="text-2xl font-bold text-red-600">{{ totalDespesas() | number:'1.2-2' }}</p>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-sm text-gray-600">Resultado (Saldo)</span>
+                        <p class="text-2xl font-bold" [class.text-green-600]="resultadoMensal() >= 0"
+                            [class.text-red-600]="resultadoMensal() < 0">
+                            {{ resultadoMensal() | number:'1.2-2' }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        }
+
+        <!-- ========== Aba Patrimônio Líquido ========== -->
+        @case ('patrimonio') {
+        <section>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">Patrimônio Líquido</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Seção Ativos -->
+                <div>
+                    <h3 class="text-xl font-semibold text-green-700 mb-4">Ativos (O que possui)</h3>
+                    <div class="overflow-x-auto shadow-md rounded-lg">
+                        <table class="w-full min-w-[400px] table-auto">
+                            <thead class="bg-gray-100 text-left text-sm font-semibold text-gray-600 uppercase">
+                                <tr>
+                                    <th class="p-4">Tipo</th>
+                                    <th class="p-4">Item</th>
+                                    <th class="p-4">Valor (R$)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                @for (item of ativos(); track $index) {
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-4">{{ item.tipo }}</td>
+                                    <td class="p-4">{{ item.item }}</td>
+                                    <td class="p-4">{{ item.valor | number:'1.2-2' }}</td>
+                                </tr>
+                                }
+                                <tr class="bg-gray-100 font-bold">
+                                    <td class="p-4" colspan="2">TOTAL ATIVOS</td>
+                                    <td class="p-4">{{ totalAtivos() | number:'1.2-2' }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Seção Passivos -->
+                <div>
+                    <h3 class="text-xl font-semibold text-red-700 mb-4">Passivos (O que deve)</h3>
+                    <div class="overflow-x-auto shadow-md rounded-lg">
+                        <table class="w-full min-w-[400px] table-auto">
+                            <thead class="bg-gray-100 text-left text-sm font-semibold text-gray-600 uppercase">
+                                <tr>
+                                    <th class="p-4">Tipo</th>
+                                    <th class="p-4">Item</th>
+                                    <th class="p-4">Valor (R$)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                @for (item of passivos(); track $index) {
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-4">{{ item.tipo }}</td>
+                                    <td class="p-4">{{ item.item }}</td>
+                                    <td class="p-4">{{ item.valor | number:'1.2-2' }}</td>
+                                </tr>
+                                }
+                                <tr class="bg-gray-100 font-bold">
+                                    <td class="p-4" colspan="2">TOTAL PASSIVOS</td>
+                                    <td class="p-4">{{ totalPassivos() | number:'1.2-2' }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resumo Patrimônio -->
+            <div class="mt-8 bg-blue-50 p-6 rounded-lg shadow-inner text-center">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2">Patrimônio Líquido Total</h3>
+                <p class="text-4xl font-bold text-blue-900">
+                    {{ patrimonioLiquido() | number:'1.2-2' }}
+                </p>
+                <span class="text-blue-700">(Total de Ativos - Total de Passivos)</span>
+            </div>
+        </section>
+        }
+
+        <!-- ========== Aba Investimentos ========== -->
+        @case ('investimentos') {
+        <section>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">Controle de Investimentos</h2>
+            <div class="overflow-x-auto shadow-md rounded-lg">
+                <table class="w-full min-w-[900px] table-auto">
+                    <thead class="bg-gray-100 text-left text-sm font-semibold text-gray-600 uppercase">
+                        <tr>
+                            <th class="p-4">Tipo</th>
+                            <th class="p-4">Classe</th>
+                            <th class="p-4">Ativo/Nome</th>
+                            <th class="p-4">Corretora</th>
+                            <th class="p-4">Valor Aplicado (R$)</th>
+                            <th class="p-4">Valor Atual (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        @for (item of investimentos(); track $index) {
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4">{{ item.tipo }}</td>
+                            <td class="p-4">{{ item.classe }}</td>
+                            <td class="p-4">{{ item.ativo }}</td>
+                            <td class="p-4">{{ item.corretora }}</td>
+                            <td class="p-4">{{ item.valorAplicado | number:'1.2-2' }}</td>
+                            <td class="p-4">{{ item.valorAtual | number:'1.2-2' }}</td>
+                        </tr>
+                        }
+                        <tr class="bg-gray-100 font-bold">
+                            <td class="p-4" colspan="4">TOTAL INVESTIDO</td>
+                            <td class="p-4">{{ totalInvestidoAplicado() | number:'1.2-2' }}</td>
+                            <td class="p-4">{{ totalInvestido() | number:'1.2-2' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        }
+
+        <!-- ========== Aba Metas e Objetivos ========== -->
+        @case ('metas') {
+        <section>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">Metas e Objetivos</h2>
+            <div class="overflow-x-auto shadow-md rounded-lg">
+                <table class="w-full min-w-[700px] table-auto">
+                    <thead class="bg-gray-100 text-left text-sm font-semibold text-gray-600 uppercase">
+                        <tr>
+                            <th class="p-4">Objetivo</th>
+                            <th class="p-4">Tipo (Prazo)</th>
+                            <th class="p-4">Valor Total (R$)</th>
+                            <th class="p-4">Valor Acumulado (R$)</th>
+                            <th class="p-4">% Concluído</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        @for (item of metas(); track $index) {
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4">{{ item.objetivo }}</td>
+                            <td class="p-4">{{ item.tipo }}</td>
+                            <td class="p-4">{{ item.valorTotal | number:'1.2-2' }}</td>
+                            <td class="p-4">{{ item.valorAcumulado | number:'1.2-2' }}</td>
+                            <td class="p-4">
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full"
+                                        [style.width.%]="(item.valorAcumulado / item.valorTotal) * 100"></div>
+                                </div>
+                                <span class="text-sm">{{ (item.valorAcumulado / item.valorTotal) | percent:'1.1-1'
+                                    }}</span>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        }
+
+        <!-- ========== Aba Dívidas ========== -->
+        @case ('dividas') {
+        <section>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">Acompanhamento de Dívidas</h2>
+            <div class="overflow-x-auto shadow-md rounded-lg">
+                <table class="w-full min-w-[900px] table-auto">
+                    <thead class="bg-gray-100 text-left text-sm font-semibold text-gray-600 uppercase">
+                        <tr>
+                            <th class="p-4">Tipo</th>
+                            <th class="p-4">Credor</th>
+                            <th class="p-4">Saldo Devedor (R$)</th>
+                            <th class="p-4">Juros (a.m. %)</th>
+                            <th class="p-4">Parcela (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        @for (item of dividas(); track $index) {
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4">{{ item.tipo }}</td>
+                            <td class="p-4">{{ item.credor }}</td>
+                            <td class="p-4">{{ item.saldoAtual | number:'1.2-2' }}</td>
+                            <td class="p-4">{{ item.taxaJurosMensal | number:'1.1-2' }}%</td>
+                            <td class="p-4">{{ item.parcela | number:'1.2-2' }}</td>
+                        </tr>
+                        }
+                        <tr class="bg-gray-100 font-bold">
+                            <td class="p-4" colspan="2">TOTAL DÍVIDAS</td>
+                            <td class="p-4">{{ totalDividas() | number:'1.2-2' }}</td>
+                            <td class="p-4" colspan="2"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        }
+        }
+    </main>
+</div>
