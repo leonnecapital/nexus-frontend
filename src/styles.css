@@ -1,2 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+/* Estilos Globais para o componente */
+:host {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilização base da tabela para garantir consistência */
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #f9fafb;
+    /* bg-gray-50 */
+}
+
+th,
+td {
+    border: 1px solid #e5e7eb;
+    /* border-gray-200 */
+}
+
+/* Adicionando um leve 'zebrado' se não estiver usando hover */
+tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+    /* bg-gray-50 */
+}
+
+tbody tr:hover {
+    background-color: #f3f4f6;
+    /* bg-gray-100 */
+}

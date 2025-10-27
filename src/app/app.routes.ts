@@ -4,12 +4,17 @@ import { Signin } from './components/signin/signin';
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'signin',
+        redirectTo: 'signIn',
         pathMatch: 'full'
     },
     {
-        path: 'signin',
+        path: 'signIn',
         pathMatch: 'full',
         loadComponent: () => import('./components/signin/signin').then(m => m.Signin)
+    },
+    {
+        path: 'dashboard',
+        pathMatch: 'full',
+        loadComponent: () => import('./components/dashboard/dashboard').then(m => m.Dashboard)
     }
 ];
