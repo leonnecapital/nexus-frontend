@@ -1,10 +1,11 @@
+import { NgClass } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Form ,FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
-  imports: [ReactiveFormsModule, FormsModule, RouterLink],
+  imports: [NgClass, ReactiveFormsModule, FormsModule, RouterLink],
   templateUrl: './signin.html',
   styleUrl: './signin.css',
 })
@@ -30,6 +31,6 @@ export class Signin {
       return;
     }
 
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/u/dashboard']);
   }
 }
