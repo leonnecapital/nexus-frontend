@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
 import { Signin } from './components/signin/signin';
+import { Authentication } from './components/authentication/authentication';
 
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'signIn',
+        component: Authentication,
         pathMatch: 'full'
     },
     {

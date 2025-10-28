@@ -1,0 +1,108 @@
+<div class="min-h-screen flex">
+    
+    <div class="w-full md:w-2/5 flex items-center justify-center p-8 sm:p-12 lg:p-16 bg-white">
+        <div class="w-full max-w-sm">
+            <h1 class="text-3xl font-extrabold text-[#001f50] mb-2">
+                Bem-vindo de Volta
+            </h1>
+            <p class="text-gray-600 mb-8">
+                Entre com suas credenciais ou crie uma conta.
+            </p>
+
+            <div id="auth-container">
+                
+                <form id="signin-form">
+                    <div class="mb-5">
+                        <label for="email-login" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                        <input type="email" id="email-login" name="email-login"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#5c9afc] focus:border-[#5c9afc] transition duration-150"
+                            placeholder="seu.email@exemplo.com" required>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="password-login" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+                        <input type="password" id="password-login" name="password-login"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#5c9afc] focus:border-[#5c9afc] transition duration-150"
+                            placeholder="Mínimo 6 caracteres" required>
+                    </div>
+
+                    <div class="flex justify-between items-center mb-6">
+                        <label class="flex items-center text-sm text-gray-600">
+                            <input type="checkbox" class="h-4 w-4 text-[#5c9afc] border-gray-300 rounded focus:ring-[#5c9afc]">
+                            <span class="ml-2">Lembrar de mim</span>
+                        </label>
+                        <a href="#" class="text-sm font-medium text-[#5c9afc] hover:text-[#001f50] transition duration-150">
+                            Esqueceu a senha?
+                        </a>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full py-3 px-4 rounded-lg text-white font-semibold bg-[#001f50] hover:bg-[#001940] transition duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-[#5c9afc] focus:ring-offset-2">
+                        Entrar
+                    </button>
+                    
+                    <p class="mt-6 text-center text-sm text-gray-600">
+                        Não tem uma conta?
+                        <a href="#" id="show-signup" onclick="toggleForm('signup')"
+                           class="font-semibold text-[#f2ab1a] hover:text-[#e09809] transition duration-150 ml-1">
+                            Cadastre-se
+                        </a>
+                    </p>
+                </form>
+
+                <form id="signup-form" class="hidden">
+                     <div class="mb-5">
+                        <label for="name-signup" class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                        <input type="text" id="name-signup" name="name-signup"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#5c9afc] focus:border-[#5c9afc] transition duration-150"
+                            placeholder="Seu nome" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="email-signup" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                        <input type="email" id="email-signup" name="email-signup"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#5c9afc] focus:border-[#5c9afc] transition duration-150"
+                            placeholder="seu.email@exemplo.com" required>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="password-signup" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+                        <input type="password" id="password-signup" name="password-signup"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#5c9afc] focus:border-[#5c9afc] transition duration-150"
+                            placeholder="Mínimo 6 caracteres" required>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full py-3 px-4 rounded-lg text-white font-semibold bg-[#f2ab1a] hover:bg-[#e09809] transition duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-[#5c9afc] focus:ring-offset-2">
+                        Cadastrar
+                    </button>
+                    
+                    <p class="mt-6 text-center text-sm text-gray-600">
+                        Já tem uma conta?
+                        <a href="#" id="show-signin" onclick="toggleForm('signin')"
+                           class="font-semibold text-[#001f50] hover:text-[#5c9afc] transition duration-150 ml-1">
+                            Fazer Login
+                        </a>
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden md:block md:w-3/5 bg-gray-200 relative">
+        <div class="absolute inset-0 bg-cover bg-center"
+             style="background-image: url('https://images.unsplash.com/photo-1590283603417-a0680373e970?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        </div>
+        
+        <div class="absolute inset-0 bg-[#001f50] opacity-80 flex items-center justify-center">
+             <div class="text-white text-center p-8">
+                 <h2 class="text-4xl font-extrabold mb-4 text-[#5c9afc]">
+                     Seu Futuro Financeiro Começa Aqui
+                 </h2>
+                 <p class="text-xl font-light max-w-lg mx-auto">
+                     Ferramentas poderosas e seguras para gerenciar seus ativos.
+                 </p>
+             </div>
+        </div>
+    </div>
+</div>
