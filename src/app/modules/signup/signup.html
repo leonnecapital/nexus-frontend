@@ -10,7 +10,7 @@
 
             <div id="auth-container">
 
-                <form id="signin-form" class="hidden">
+                <div id="signup-form" formGroup="form">
 
                     <button type="button"
                         class="w-full py-2.5 px-4 rounded-lg text-white font-semibold bg-[#5c9afc] hover:bg-[#4a8ce0] transition duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-[#5c9afc] focus:ring-offset-2 flex items-center justify-center mb-6">
@@ -30,71 +30,7 @@
                         </svg>
                         Continuar com Google
                     </button>
-                    <div class="relative flex justify-center items-center mb-6">
-                        <div class="w-full h-px bg-gray-300"></div>
-                        <span class="absolute px-4 text-sm text-gray-500 bg-white">ou</span>
-                    </div>
 
-                    <div class="mb-5">
-                        <label for="email-login" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
-                        <input type="email" id="email-login" name="email-login"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#5c9afc] focus:border-[#5c9afc] transition duration-150"
-                            placeholder="seu.email@exemplo.com" required>
-                    </div>
-
-                    <div class="mb-6">
-                        <label for="password-login" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
-                        <input type="password" id="password-login" name="password-login"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#5c9afc] focus:border-[#5c9afc] transition duration-150"
-                            placeholder="Mínimo 6 caracteres" required>
-                    </div>
-
-                    <div class="flex justify-between items-center mb-6">
-                        <label class="flex items-center text-sm text-gray-600">
-                            <input type="checkbox"
-                                class="h-4 w-4 text-[#5c9afc] border-gray-300 rounded focus:ring-[#5c9afc]">
-                            <span class="ml-2">Lembrar de mim</span>
-                        </label>
-                        <a href="#"
-                            class="text-sm font-medium text-[#5c9afc] hover:text-[#001f50] transition duration-150">
-                            Esqueceu a senha?
-                        </a>
-                    </div>
-
-                    <button type="submit"
-                        class="w-full py-3 px-4 rounded-lg text-white font-semibold bg-[#001f50] hover:bg-[#001940] transition duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-[#5c9afc] focus:ring-offset-2">
-                        Entrar
-                    </button>
-
-                    <p class="mt-6 text-center text-sm text-gray-600">
-                        Não tem uma conta?
-                        <a href="#" id="show-signup" onclick="toggleForm('signup')"
-                            class="font-semibold text-[#f2ab1a] hover:text-[#e09809] transition duration-150 ml-1">
-                            Cadastre-se
-                        </a>
-                    </p>
-                </form>
-
-                <form id="signup-form">
-
-                    <button type="button"
-                        class="w-full py-2.5 px-4 rounded-lg text-white font-semibold bg-[#5c9afc] hover:bg-[#4a8ce0] transition duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-[#5c9afc] focus:ring-offset-2 flex items-center justify-center mb-6">
-                        <svg class="w-5 h-5 mr-2" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M43.61 20.0825H24V27.9175H35.4175C34.9088 30.65 33.15 32.7475 30.705 34.33L38.1675 39.8125C42.75 35.805 45.62 29.58 45.62 22.95C45.62 21.6425 45.485 20.335 45.215 19.06L43.61 20.0825Z"
-                                fill="#FFFFFF" />
-                            <path
-                                d="M24 45.62C30.7625 45.62 36.6325 43.435 41.025 39.8125L33.5625 34.33C31.42 35.6375 28.8475 36.3125 25.865 36.3125C20.675 36.3125 16.275 33.0275 14.67 28.3225L7.2075 33.805C10.635 40.575 17.65 45.62 24 45.62Z"
-                                fill="#FFFFFF" />
-                            <path
-                                d="M14.67 28.3225C13.88 25.8775 13.88 23.185 14.67 20.74L7.2075 15.2575C4.7625 19.0375 4.7625 24.025 7.2075 28.795L14.67 28.3225Z"
-                                fill="#FFFFFF" />
-                            <path
-                                d="M24 12.7575C27.3825 12.7575 30.17 14.15 32.195 16.035L38.3075 10.0125C34.155 6.2325 29.3525 4 24 4C17.65 4 10.635 9.045 7.2075 15.815L14.67 21.2975C16.275 16.5925 20.675 13.2675 25.865 13.2675H24V12.7575Z"
-                                fill="#FFFFFF" />
-                        </svg>
-                        Continuar com Google
-                    </button>
                     <div class="relative flex justify-center items-center mb-6">
                         <div class="w-full h-px bg-gray-300"></div>
                         <span class="absolute px-4 text-sm text-gray-500 bg-white">ou crie sua conta com email</span>
@@ -104,24 +40,26 @@
                         <label for="name-signup" class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
                         <input type="text" id="name-signup" name="name-signup"
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#5c9afc] focus:border-[#5c9afc] transition duration-150"
-                            placeholder="Seu nome" required>
+                            placeholder="Seu nome" formControlName="fullName">
                     </div>
+
                     <div class="mb-5">
                         <label for="email-signup" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
                         <input type="email" id="email-signup" name="email-signup"
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#5c9afc] focus:border-[#5c9afc] transition duration-150"
-                            placeholder="seu.email@exemplo.com" required>
+                            placeholder="seu.email@exemplo.com" formControlName="email">
                     </div>
 
                     <div class="mb-6">
                         <label for="password-signup" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
                         <input type="password" id="password-signup" name="password-signup"
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#5c9afc] focus:border-[#5c9afc] transition duration-150"
-                            placeholder="Mínimo 6 caracteres" required>
+                            placeholder="Mínimo 6 caracteres" formControlName="password">
                     </div>
 
                     <button type="submit"
-                        class="w-full py-3 px-4 rounded-lg text-white font-semibold bg-[#f2ab1a] hover:bg-[#e09809] transition duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-[#5c9afc] focus:ring-offset-2">
+                        class="w-full py-3 px-4 rounded-lg text-white font-semibold bg-[#f2ab1a] hover:bg-[#e09809] transition duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-[#5c9afc] focus:ring-offset-2"
+                        (click)="doSignUp()" [disabled]="!form.valid">
                         Cadastrar
                     </button>
 
@@ -132,7 +70,7 @@
                             Fazer Login
                         </a>
                     </p>
-                </form>
+                </div>
 
             </div>
         </div>
