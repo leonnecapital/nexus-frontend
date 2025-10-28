@@ -1,26 +1,35 @@
 import { Routes } from '@angular/router';
-import { Signin } from './components/signin/signin';
-import { Authentication } from './components/authentication/authentication';
+import { Signin } from './modules/signin/signin';
 
 export const routes: Routes = [
     {
         path: '',
-        component: Authentication,
+        redirectTo: 'signin',
         pathMatch: 'full'
     },
     {
-        path: 'signIn',
+        path: 'signin',
         pathMatch: 'full',
-        loadComponent: () => import('./components/signin/signin').then(m => m.Signin)
+        loadComponent: () => import('./modules/signin/signin').then(m => m.Signin)
+    },
+    {
+        path: 'signup',
+        pathMatch: 'full',
+        loadComponent: () => import('./modules/signup/signup').then(m => m.Signup)
+    },
+    {
+        path: 'forgot-password',
+        pathMatch: 'full',
+        loadComponent: () => import('./modules/forgot-password/forgot-password').then(m => m.ForgotPassword)
     },
     {
         path: 'dashboard',
         pathMatch: 'full',
-        loadComponent: () => import('./components/dashboard/dashboard').then(m => m.Dashboard)
+        loadComponent: () => import('./modules/dashboard/dashboard').then(m => m.Dashboard)
     },
     {
         path: 'plans',
         pathMatch: 'full',
-        loadComponent: () => import('./components/plans/plans').then(m => m.Plans)
+        loadComponent: () => import('./modules/plans/plans').then(m => m.Plans)
     }
 ];
