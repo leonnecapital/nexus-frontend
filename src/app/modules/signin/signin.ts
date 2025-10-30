@@ -33,4 +33,8 @@ export class Signin {
 
     this.router.navigate(['/u/dashboard']);
   }
+
+  doSignUp() {
+    this.router.navigate(['/signup']);
+  }
 }

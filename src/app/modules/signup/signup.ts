@@ -1,10 +1,11 @@
+import { NgClass } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ɵInternalFormsSharedModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
-  imports: [ɵInternalFormsSharedModule],
+  imports: [ReactiveFormsModule, FormsModule, RouterLink],
   templateUrl: './signup.html',
   styleUrl: './signup.css',
 })

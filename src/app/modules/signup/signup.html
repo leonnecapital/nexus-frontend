@@ -10,7 +10,7 @@
 
             <div id="auth-container">
 
-                <div id="signup-form" formGroup="form">
+                <div id="signup-form" [formGroup]="form">
 
                     <button type="button"
                         class="w-full py-2.5 px-4 rounded-lg text-white font-semibold bg-[#5c9afc] hover:bg-[#4a8ce0] transition duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-[#5c9afc] focus:ring-offset-2 flex items-center justify-center mb-6">
@@ -65,7 +65,7 @@
 
                     <p class="mt-6 text-center text-sm text-gray-600">
                         Já tem uma conta?
-                        <a href="#" id="show-signin" onclick="toggleForm('signin')"
+                        <a id="show-signin" routerLink="/signin"
                             class="font-semibold text-[#001f50] hover:text-[#5c9afc] transition duration-150 ml-1">
                             Fazer Login
                         </a>
