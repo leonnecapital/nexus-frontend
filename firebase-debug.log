@@ -2,303 +2,183 @@
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-29T17:40:10.406Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T17:40:10.432Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[debug] [2025-10-29T17:40:10.532Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:10.534Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:10.546Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T17:40:10.586Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T17:40:10.593Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:10.915Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:10.915Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:10.921Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T17:40:10.926Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T17:40:10.927Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:10.960Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:10.960Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:10.967Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T17:40:10.979Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T17:40:10.980Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:11.118Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:11.120Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:11.120Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T17:40:11.124Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T17:40:11.124Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:11.146Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T17:40:11.148Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[debug] [2025-10-29T17:40:11.161Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:11.164Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:11.164Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T17:40:11.166Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T17:40:11.166Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:11.183Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:11.184Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:11.185Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T17:40:11.189Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T17:40:11.189Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:11.199Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:11.201Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:11.202Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T17:40:11.204Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T17:40:11.205Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:11.231Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:11.232Z] Checked if tokens are valid: false, expires at: 1761687905041
-[debug] [2025-10-29T17:40:11.232Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T17:40:11.236Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T17:40:11.236Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:11.965Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T17:40:11.974Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:12.086Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [none]
-[debug] [2025-10-29T17:40:12.095Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:12.234Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T17:40:12.238Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:12.300Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [none]
-[debug] [2025-10-29T17:40:12.301Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:12.458Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T17:40:12.471Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:12.530Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [none]
-[debug] [2025-10-29T17:40:12.531Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:12.646Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T17:40:12.646Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:12.696Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [none]
-[debug] [2025-10-29T17:40:12.698Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:12.740Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T17:40:12.740Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:12.780Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [none]
-[debug] [2025-10-29T17:40:12.780Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:12.956Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T17:40:12.957Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:13.006Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [none]
-[debug] [2025-10-29T17:40:13.007Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:13.056Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T17:40:13.056Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:13.097Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [none]
-[debug] [2025-10-29T17:40:13.099Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:13.202Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T17:40:13.204Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T17:40:13.259Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [none]
-[debug] [2025-10-29T17:40:13.261Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:13.415Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com 200
-[debug] [2025-10-29T17:40:13.418Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [omitted]
-[debug] [2025-10-29T17:40:13.433Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com 403
-[debug] [2025-10-29T17:40:13.434Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [omitted]
-[debug] [2025-10-29T17:40:13.456Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com 403
-[debug] [2025-10-29T17:40:13.457Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [omitted]
-[debug] [2025-10-29T17:40:13.482Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com 200
-[debug] [2025-10-29T17:40:13.491Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [omitted]
-[debug] [2025-10-29T17:40:13.492Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com 200
-[debug] [2025-10-29T17:40:13.501Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [omitted]
-[debug] [2025-10-29T17:40:13.521Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com 200
-[debug] [2025-10-29T17:40:13.533Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [omitted]
-[debug] [2025-10-29T17:40:13.545Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com 200
-[debug] [2025-10-29T17:40:13.545Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-10-30T13:51:48.547Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-30T13:51:48.548Z] > authorizing via signed-in user (leonecbruno@gmail.com)
+[debug] [2025-10-30T13:51:48.634Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.635Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.639Z] > refreshing access token with scopes: []
+[debug] [2025-10-30T13:51:48.646Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-30T13:51:48.646Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:48.725Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.725Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.725Z] > refreshing access token with scopes: []
+[debug] [2025-10-30T13:51:48.726Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-30T13:51:48.727Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:48.731Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.731Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.732Z] > refreshing access token with scopes: []
+[debug] [2025-10-30T13:51:48.733Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-30T13:51:48.733Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:48.759Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.759Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.759Z] > refreshing access token with scopes: []
+[debug] [2025-10-30T13:51:48.759Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-30T13:51:48.760Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:48.763Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-30T13:51:48.763Z] > authorizing via signed-in user (leonecbruno@gmail.com)
+[debug] [2025-10-30T13:51:48.767Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.767Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.767Z] > refreshing access token with scopes: []
+[debug] [2025-10-30T13:51:48.768Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-30T13:51:48.768Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:48.771Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.772Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.772Z] > refreshing access token with scopes: []
+[debug] [2025-10-30T13:51:48.773Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-30T13:51:48.773Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:48.777Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.777Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.777Z] > refreshing access token with scopes: []
+[debug] [2025-10-30T13:51:48.779Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-30T13:51:48.779Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:48.792Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.793Z] Checked if tokens are valid: false, expires at: 1761787138821
+[debug] [2025-10-30T13:51:48.793Z] > refreshing access token with scopes: []
+[debug] [2025-10-30T13:51:48.800Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-30T13:51:48.800Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:48.922Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-30T13:51:48.923Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:48.950Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-10-30T13:51:48.950Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:51:48.960Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-30T13:51:48.960Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:48.974Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [none]
+[debug] [2025-10-30T13:51:48.974Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:51:49.036Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-30T13:51:49.036Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:49.064Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-10-30T13:51:49.064Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:51:49.116Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-30T13:51:49.117Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:49.140Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-10-30T13:51:49.140Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:51:49.172Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-30T13:51:49.172Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:49.195Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-10-30T13:51:49.195Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:51:49.213Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-30T13:51:49.213Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:49.228Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [none]
+[debug] [2025-10-30T13:51:49.228Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:51:49.231Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-30T13:51:49.231Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:49.246Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [none]
+[debug] [2025-10-30T13:51:49.246Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:51:49.276Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-30T13:51:49.276Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-30T13:51:49.294Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [none]
+[debug] [2025-10-30T13:51:49.294Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:51:49.299Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com 200
+[debug] [2025-10-30T13:51:49.300Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [omitted]
+[debug] [2025-10-30T13:51:49.303Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-10-30T13:51:49.303Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-10-30T13:51:49.304Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-10-30T13:51:49.304Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-10-30T13:51:49.316Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com 200
+[debug] [2025-10-30T13:51:49.317Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-10-30T13:51:49.347Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com 403
+[debug] [2025-10-30T13:51:49.348Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [omitted]
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-29T17:40:13.578Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T17:40:13.581Z] > authorizing via signed-in user (leonecbruno@gmail.com)
+[debug] [2025-10-30T13:51:49.359Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-30T13:51:49.359Z] > authorizing via signed-in user (leonecbruno@gmail.com)
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-29T17:40:13.595Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T17:40:13.596Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[debug] [2025-10-29T17:40:13.615Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com 200
-[debug] [2025-10-29T17:40:13.615Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [omitted]
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-29T17:40:57.187Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T17:40:57.189Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[debug] [2025-10-29T17:40:57.212Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.213Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.214Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.214Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.216Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.216Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.239Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.243Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.243Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T17:40:57.244Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[debug] [2025-10-29T17:40:57.251Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [none]
-[debug] [2025-10-29T17:40:57.254Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:57.351Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [none]
-[debug] [2025-10-29T17:40:57.354Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:57.360Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [none]
-[debug] [2025-10-29T17:40:57.361Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:57.367Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [none]
-[debug] [2025-10-29T17:40:57.367Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:57.373Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.375Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.376Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.376Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.377Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.377Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.381Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.381Z] Checked if tokens are valid: true, expires at: 1761763212205
-[debug] [2025-10-29T17:40:57.383Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [none]
-[debug] [2025-10-29T17:40:57.384Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:57.389Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [none]
-[debug] [2025-10-29T17:40:57.389Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:57.395Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [none]
-[debug] [2025-10-29T17:40:57.395Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:57.399Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [none]
-[debug] [2025-10-29T17:40:57.399Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T17:40:57.547Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com 403
-[debug] [2025-10-29T17:40:57.547Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [omitted]
-[debug] [2025-10-29T17:40:57.634Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com 200
-[debug] [2025-10-29T17:40:57.634Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [omitted]
-[debug] [2025-10-29T17:40:57.641Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com 200
-[debug] [2025-10-29T17:40:57.641Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [omitted]
-[debug] [2025-10-29T17:40:57.649Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com 403
-[debug] [2025-10-29T17:40:57.650Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [omitted]
-[debug] [2025-10-29T17:40:57.661Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com 200
-[debug] [2025-10-29T17:40:57.662Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [omitted]
-[debug] [2025-10-29T17:40:57.672Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com 200
-[debug] [2025-10-29T17:40:57.672Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [omitted]
-[debug] [2025-10-29T17:40:57.687Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com 200
-[debug] [2025-10-29T17:40:57.687Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [omitted]
-[debug] [2025-10-29T17:40:57.697Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com 200
-[debug] [2025-10-29T17:40:57.706Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [omitted]
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-29T17:40:57.726Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T17:40:57.726Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-29T17:40:57.731Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T17:40:57.732Z] > authorizing via signed-in user (leonecbruno@gmail.com)
+[debug] [2025-10-30T13:51:49.363Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-30T13:51:49.363Z] > authorizing via signed-in user (leonecbruno@gmail.com)
+[debug] [2025-10-30T13:51:49.373Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com 200
+[debug] [2025-10-30T13:51:49.373Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-10-30T13:51:49.376Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com 403
+[debug] [2025-10-30T13:51:49.376Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [omitted]
+[debug] [2025-10-30T13:51:49.389Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com 200
+[debug] [2025-10-30T13:51:49.390Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [omitted]
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-29T17:40:57.781Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T17:40:57.782Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[debug] [2025-10-29T17:40:57.782Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T17:40:57.782Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-29T17:40:57.787Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T17:40:57.787Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[debug] [2025-10-29T17:40:57.787Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T17:40:57.788Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-29T19:16:03.102Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T19:16:03.104Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[debug] [2025-10-29T19:16:03.124Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.127Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.129Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T19:16:03.138Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T19:16:03.139Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.220Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.221Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.221Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T19:16:03.223Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T19:16:03.224Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.230Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.231Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.231Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T19:16:03.232Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T19:16:03.233Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.259Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.260Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.260Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T19:16:03.260Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T19:16:03.261Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.265Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T19:16:03.265Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[debug] [2025-10-29T19:16:03.266Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.267Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.267Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T19:16:03.269Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T19:16:03.269Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.274Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.275Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.276Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T19:16:03.277Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T19:16:03.277Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.283Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.283Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.284Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T19:16:03.285Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T19:16:03.285Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.295Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.296Z] Checked if tokens are valid: false, expires at: 1761763212205
-[debug] [2025-10-29T19:16:03.296Z] > refreshing access token with scopes: []
-[debug] [2025-10-29T19:16:03.300Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2025-10-29T19:16:03.300Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.488Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T19:16:03.488Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.528Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [none]
-[debug] [2025-10-29T19:16:03.528Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T19:16:03.578Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T19:16:03.579Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.601Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [none]
-[debug] [2025-10-29T19:16:03.601Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T19:16:03.626Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T19:16:03.628Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.664Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [none]
-[debug] [2025-10-29T19:16:03.666Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T19:16:03.712Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T19:16:03.712Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.735Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [none]
-[debug] [2025-10-29T19:16:03.735Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T19:16:03.781Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T19:16:03.781Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.804Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [none]
-[debug] [2025-10-29T19:16:03.804Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T19:16:03.855Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T19:16:03.855Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.873Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [none]
-[debug] [2025-10-29T19:16:03.873Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T19:16:03.909Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T19:16:03.912Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:03.935Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [none]
-[debug] [2025-10-29T19:16:03.936Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T19:16:04.000Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2025-10-29T19:16:04.000Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2025-10-29T19:16:04.035Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [none]
-[debug] [2025-10-29T19:16:04.035Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/lcap-nexus
-[debug] [2025-10-29T19:16:04.068Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com 403
-[debug] [2025-10-29T19:16:04.069Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [omitted]
-[debug] [2025-10-29T19:16:04.131Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com 403
-[debug] [2025-10-29T19:16:04.142Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [omitted]
-[debug] [2025-10-29T19:16:04.231Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com 200
-[debug] [2025-10-29T19:16:04.237Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [omitted]
-[debug] [2025-10-29T19:16:04.293Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com 200
-[debug] [2025-10-29T19:16:04.293Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [omitted]
-[debug] [2025-10-29T19:16:04.327Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com 200
-[debug] [2025-10-29T19:16:04.327Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [omitted]
-[debug] [2025-10-29T19:16:04.329Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com 200
-[debug] [2025-10-29T19:16:04.329Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [omitted]
-[debug] [2025-10-29T19:16:04.334Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com 200
-[debug] [2025-10-29T19:16:04.335Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [omitted]
+[debug] [2025-10-30T13:52:51.537Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-30T13:52:51.540Z] > authorizing via signed-in user (leonecbruno@gmail.com)
+[debug] [2025-10-30T13:52:51.562Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.564Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.565Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.566Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.568Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.568Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.585Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.586Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.586Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-30T13:52:51.589Z] > authorizing via signed-in user (leonecbruno@gmail.com)
+[debug] [2025-10-30T13:52:51.593Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [none]
+[debug] [2025-10-30T13:52:51.595Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:52:51.630Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-10-30T13:52:51.630Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:52:51.633Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-10-30T13:52:51.633Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:52:51.635Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [none]
+[debug] [2025-10-30T13:52:51.635Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:52:51.638Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.638Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.639Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.639Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.639Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.639Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.641Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.641Z] Checked if tokens are valid: true, expires at: 1761835908280
+[debug] [2025-10-30T13:52:51.642Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [none]
+[debug] [2025-10-30T13:52:51.642Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:52:51.646Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-10-30T13:52:51.646Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:52:51.647Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-10-30T13:52:51.647Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:52:51.654Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [none]
+[debug] [2025-10-30T13:52:51.654Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com x-goog-quota-user=projects/lcap-nexus
+[debug] [2025-10-30T13:52:51.797Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com 403
+[debug] [2025-10-30T13:52:51.797Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [omitted]
+[debug] [2025-10-30T13:52:51.799Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com 403
+[debug] [2025-10-30T13:52:51.799Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebaseio.com [omitted]
+[debug] [2025-10-30T13:52:51.823Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com 200
+[debug] [2025-10-30T13:52:51.823Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-10-30T13:52:51.827Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-10-30T13:52:51.830Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-10-30T13:52:51.833Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-10-30T13:52:51.833Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-10-30T13:52:51.840Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com 200
+[debug] [2025-10-30T13:52:51.841Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [omitted]
+[debug] [2025-10-30T13:52:51.843Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com 200
+[debug] [2025-10-30T13:52:51.843Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-10-30T13:52:51.882Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com 200
+[debug] [2025-10-30T13:52:51.883Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firestore.googleapis.com [omitted]
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-29T19:16:04.361Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T19:16:04.361Z] > authorizing via signed-in user (leonecbruno@gmail.com)
+[debug] [2025-10-30T13:52:51.892Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-30T13:52:51.893Z] > authorizing via signed-in user (leonecbruno@gmail.com)
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-29T19:16:04.364Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T19:16:04.364Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-30T13:52:51.897Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-30T13:52:51.897Z] > authorizing via signed-in user (leonecbruno@gmail.com)
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-30T13:52:51.926Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-30T13:52:51.926Z] > authorizing via signed-in user (leonecbruno@gmail.com)
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-29T19:16:04.432Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T19:16:04.432Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[debug] [2025-10-29T19:16:04.432Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T19:16:04.432Z] > authorizing via signed-in user (leonecbruno@gmail.com)
+[debug] [2025-10-30T13:52:51.927Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-30T13:52:51.927Z] > authorizing via signed-in user (leonecbruno@gmail.com)
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-29T19:16:04.440Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T19:16:04.440Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[debug] [2025-10-29T19:16:04.440Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-29T19:16:04.441Z] > authorizing via signed-in user (leonecbruno@gmail.com)
-[debug] [2025-10-29T19:16:04.480Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com 200
-[debug] [2025-10-29T19:16:04.481Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lcap-nexus/services/firebasedataconnect.googleapis.com [omitted]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-30T13:52:51.940Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-30T13:52:51.940Z] > authorizing via signed-in user (leonecbruno@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-30T13:52:51.947Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-30T13:52:51.947Z] > authorizing via signed-in user (leonecbruno@gmail.com)

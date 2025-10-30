@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component, computed, signal, LOCALE_ID } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, signal, LOCALE_ID, OnInit, inject } from '@angular/core';
 import { CommonModule, registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './services/auth-service';
 
 // 1. Registrar os dados de localidade para 'pt-BR'
 registerLocaleData(localePt);
@@ -17,7 +18,31 @@ registerLocaleData(localePt);
   styleUrl: './../styles.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class App {
+export class App implements OnInit {
+
+  authService = inject(AuthService);
+  router = inject(Router);
+  
+  ngOnInit(): void {
+    // O Angular chama esta função na inicialização do app.
+    // Se o usuário estiver voltando do Google, o resultado estará aqui.
+    this.authService.getGoogleRedirectResult().subscribe({
+      next: (result) => {
+        if (result) {
+          // O login foi bem-sucedido!
+          console.log('Login do Google bem-sucedido:', result.user);
+          // Redireciona para o dashboard
+          this.router.navigate(['/dashboard']); 
+        } else {
+          // Não é um retorno de redirecionamento ou o usuário já está logado
+        }
+      },
+      error: (err) => {
+        console.error('Erro no login por redirecionamento:', err);
+        // Lidar com erros de autenticação aqui
+      }
+    });
+  }
   
 }
 
