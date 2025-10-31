@@ -1,4 +1,4 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, inject, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { initializeApp } from 'firebase/app';
 
@@ -19,12 +19,22 @@ const firebaseConfig = {
 // Isso garante que você tenha tokens TypeScript para injetar o Firebase App e Auth
 import { InjectionToken } from '@angular/core';
 import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 // Token para o Firebase App (opcional, mas bom para consistência)
 export const FIREBASE_APP = new InjectionToken('Firebase App', {
   providedIn: 'root',
   factory: () => initializeApp(firebaseConfig),
 });
+
+// Token para o Firebase Firestore (getFirestore precisa do app)
+export const FIREBASE_FIRESTORE = new InjectionToken('Firebase Firestore', {
+  providedIn: 'root',
+  factory() {
+    const app = inject(FIREBASE_APP);
+    return getFirestore(app);
+  },
+})
 
 // Token para o Firebase Authentication (getAuth precisa do app)
 export const FIREBASE_AUTH = new InjectionToken('Firebase Auth', {

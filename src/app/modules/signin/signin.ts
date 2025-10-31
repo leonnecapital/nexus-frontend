@@ -40,7 +40,10 @@ export class Signin {
   }
 
   doSigninWithGoogleRedirect() {
-    this.authService.signinWithGoogleRedirect().subscribe((result) => console.log('signinWithGoogleRedirect => ', result));
+    this.authService
+      .signinWithGoogleRedirect()
+      .subscribe(
+        (result) => console.log('signinWithGoogleRedirect => ', result));
   }
 
   doSignUp() {
