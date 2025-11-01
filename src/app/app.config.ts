@@ -40,7 +40,7 @@ export const FIREBASE_FIRESTORE = new InjectionToken('Firebase Firestore', {
 export const FIREBASE_AUTH = new InjectionToken('Firebase Auth', {
   providedIn: 'root',
   factory: () => {
-    const app = initializeApp(firebaseConfig); // Inicializa aqui ou usa inject(FIREBASE_APP)
+    const app = inject(FIREBASE_APP); // Inicializa aqui ou usa inject(FIREBASE_APP)
     return getAuth(app);
   },
 });
