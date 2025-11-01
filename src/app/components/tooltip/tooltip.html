@@ -1,0 +1,30 @@
+<div *ngIf="currentNotification" class="fixed bottom-6 right-6 z-50 transition-all duration-300 transform"
+    [ngClass]="{'opacity-100 translate-y-0': currentNotification, 'opacity-0 translate-y-full': !currentNotification}">
+
+    <div [ngClass]="getNotificationClasses(currentNotification.type)"
+        class="max-w-xs w-full shadow-2xl rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden border-l-8 p-4 flex items-start text-white transition-opacity duration-300">
+
+        <div class="flex-shrink-0" [innerHTML]="getIcon(currentNotification.type)"></div>
+
+        <div class="ml-3 flex-1 pt-0.5">
+            <p class="text-sm font-semibold leading-5">
+                {{ currentNotification.type | uppercase }}
+            </p>
+            <p class="mt-1 text-sm">
+                {{ currentNotification.message }}
+            </p>
+        </div>
+
+        <div class="ml-4 flex-shrink-0 flex">
+            <button (click)="closeNotification()"
+                class="inline-flex text-white transition ease-in-out duration-150 hover:text-gray-200 focus:outline-none">
+                <span class="sr-only">Fechar</span>
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { Form, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth-service';
+import { NotificationService } from '../../services/notification-service';
 
 @Component({
   selector: 'app-signin',
@@ -14,6 +15,7 @@ export class Signin {
 
   router = inject(Router);
   authService = inject(AuthService);
+  notificationService = inject(NotificationService)
   private formBuilder = inject(FormBuilder);
 
   form: FormGroup = this.formBuilder.group({
@@ -28,15 +30,21 @@ export class Signin {
   constructor() { }
 
   doSignIn() {
-    console.log(this.form.value);
     if (!this.form.valid) {
       return;
     }
 
-    this.authService.signinWithEmailAndPassword(this.form.value.email, this.form.value.password).subscribe((signed) => {
-      console.log(signed);
-      this.router.navigate(['/u/dashboard']);
-    });
+    this.authService
+      .signinWithEmailAndPassword(this.form.value.email, this.form.value.password)
+      .subscribe({
+        next: (signed) => {
+          console.log(signed);
+          this.router.navigate(['/u/dashboard']);
+        },
+        error: (error) => {
+          this.notificationService.error(error.message);
+        }
+      });
   }
 
   doSigninWithGoogleRedirect() {

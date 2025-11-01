@@ -24,7 +24,6 @@ export class Signup {
   });
 
   doSignUp() {
-    console.log(this.form);
     this.errorMessage = null;
     
     if (!this.form.valid) {

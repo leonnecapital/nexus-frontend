@@ -13,7 +13,7 @@ import { getRedirectResult, UserCredential } from 'firebase/auth';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 import { FIREBASE_AUTH, FIREBASE_FIRESTORE } from '../app.config';
 import { from, Observable, switchMap } from 'rxjs';
-import { UserProfileDTO } from '../dtos/user-profile-dto';
+import { UserProfileDTO } from '../models/user-profile-dto';
 
 @Injectable({
   providedIn: 'root'
