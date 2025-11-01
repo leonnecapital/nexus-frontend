@@ -31,24 +31,24 @@ export const routes: Routes = [
                 loadComponent: () => import('./modules/dashboard/dashboard').then(m => m.Dashboard)
             },
             {
-                path: 'orcamento',
-                loadComponent: () => import('./modules/dashboard/dashboard').then(m => m.Dashboard)
-            },
-            {
-                path: 'patrimonio',
-                loadComponent: () => import('./modules/dashboard/dashboard').then(m => m.Dashboard)
+                path: 'diagnostico-financeiro',
+                loadComponent: () => import('./modules/diagnostico-financeiro/diagnostico-financeiro').then(m => m.DiagnosticoFinanceiro)
             },
             {
                 path: 'investimentos',
-                loadComponent: () => import('./modules/dashboard/dashboard').then(m => m.Dashboard)
+                loadComponent: () => import('./modules/investimentos/investimentos').then(m => m.Investimentos)
             },
             {
-                path: 'metas',
-                loadComponent: () => import('./modules/dashboard/dashboard').then(m => m.Dashboard)
+                path: 'planejamento-financeiro',
+                loadComponent: () => import('./modules/planejamento-financeiro/planejamento-financeiro').then(m => m.PlanejamentoFinanceiro)
             },
             {
-                path: 'dividas',
-                loadComponent: () => import('./modules/dashboard/dashboard').then(m => m.Dashboard)
+                path: 'controle-de-gastos',
+                loadComponent: () => import('./modules/controle-de-gastos/controle-de-gastos').then(m => m.ControleDeGastos)
+            },
+            {
+                path: 'perfil',
+                loadComponent: () => import('./modules/profile/profile').then(m => m.Profile)
             },
             {
                 path: '',

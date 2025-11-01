@@ -1,24 +1,24 @@
 <div class="flex h-screen bg-gray-50 overflow-hidden">
 
     <div
-        class="hidden md:flex flex-col w-20 lg:w-64 bg-[#001f50] text-white shadow-xl transition-all duration-300 group hover:w-64">
+        class="hidden md:flex flex-col w-16 lg:w-60 bg-[#001f50] text-white shadow-xl transition-all duration-300 group hover:w-60">
 
-        <div class="flex items-center justify-center h-20 border-b border-[#5c9afc]/30 p-4 overflow-hidden">
+        <div class="flex items-center justify-center h-16 border-b border-[#5c9afc]/30 p-2 overflow-hidden">
             <span
-                class="text-2xl font-extrabold tracking-wider text-white whitespace-nowrap hidden group-hover:inline lg:inline">
+                class="text-xl font-extrabold tracking-wider text-white whitespace-nowrap hidden group-hover:inline lg:inline">
                 NEX<span class="text-[#5c9afc]">US</span>
             </span>
-            <span class="text-2xl font-extrabold tracking-wider text-white block group-hover:hidden lg:hidden">
+            <span class="text-xl font-extrabold tracking-wider text-white block group-hover:hidden lg:hidden">
                 N<span class="text-[#5c9afc]">X</span>
             </span>
         </div>
 
-        <nav class="flex-grow p-4 space-y-4">
-
+        <nav class="flex-grow p-3 space-y-3">
             @for (tab of tabs; track tab.id) {
-            <a (click)="doClick(tab.id)" [ngClass]="getTabClass(tab)">
+            <a (click)="doClick(tab.id)" [ngClass]="getTabClass(tab)"
+                class="flex items-center justify-center lg:justify-start py-2 px-3 rounded-lg transition duration-150 group-hover:justify-start lg:justify-start">
 
-                <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="tab.iconPath">
                     </path>
@@ -27,33 +27,23 @@
                 <span class="ml-3 whitespace-nowrap hidden group-hover:block lg:block">{{tab.label}}</span>
             </a>
             }
-
         </nav>
     </div>
 
     <div class="flex flex-col flex-1 overflow-y-auto">
 
         <header
-            class="flex items-center justify-between h-20 bg-white border-b border-gray-200 px-6 shadow-md sticky top-0 z-10">
+            class="flex items-center justify-between h-16 bg-white border-b border-gray-200 px-6 shadow-md sticky top-0 z-10">
 
             <div class="flex items-center">
-                <button class="text-gray-500 focus:outline-none md:hidden mr-4" aria-label="Abrir Menu">
+                <button (click)="toggleMobileMenu()" class="text-gray-500 focus:outline-none md:hidden mr-4"
+                    aria-label="Abrir Menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
-
-                <div class="hidden lg:block w-96 relative">
-                    <input type="text" placeholder="Pesquisar transações, relatórios..."
-                        class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg bg-gray-100 focus:ring-[#5c9afc] focus:border-[#5c9afc] transition">
-                    <svg class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                </div>
             </div>
 
             <div class="flex items-center space-x-4">
@@ -68,17 +58,52 @@
                     <span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-[#f2ab1a] border-2 border-white"></span>
                 </button>
 
+                @if (isMobileMenuOpen()) {
+                <div class="fixed inset-0 bg-opacity-5 z-20 md:hidden" (click)="toggleMobileMenu()">
+                </div>
+
+                <div class="fixed inset-y-0 left-0 w-60 bg-[#001f50] text-white shadow-2xl z-30 
+                                    transition-transform duration-300 transform md:hidden">
+
+                    <div class="flex items-center justify-center h-16 border-b border-[#5c9afc]/30 p-2">
+                        <span class="text-xl font-extrabold tracking-wider text-white whitespace-nowrap">
+                            NEX<span class="text-[#5c9afc]">US</span>
+                        </span>
+                    </div>
+
+                    <nav class="flex-grow p-3 space-y-3">
+                        @for (tab of tabs; track tab.id) {
+                        <a (click)="doClick(tab.id); toggleMobileMenu()" [ngClass]="getTabClass(tab)"
+                            class="flex items-center justify-start py-2 px-3 rounded-lg transition duration-150">
+
+                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    [attr.d]="tab.iconPath">
+                                </path>
+                            </svg>
+
+                            <span class="ml-3 whitespace-nowrap">{{tab.label}}</span>
+                        </a>
+                        }
+                    </nav>
+
+                </div>
+                }
+
                 <div class="flex items-center space-x-3 border-l pl-4 cursor-pointer group">
                     <img class="h-10 w-10 rounded-full object-cover border-2 border-gray-200 group-hover:border-[#5c9afc] transition"
-                        src="https://via.placeholder.com/150/5c9afc/ffffff?text=U" alt="Avatar do Usuário">
+                        [src]="userPhotoUrl" [alt]="'Avatar de ' + userName">
+
                     <div class="text-left hidden sm:block">
-                        <p class="text-sm font-medium text-[#001f50] group-hover:text-[#5c9afc] transition">João Silva
+                        <p class="text-sm font-medium text-[#001f50] group-hover:text-[#5c9afc] transition">{{userName}}
                         </p>
-                        <p class="text-xs text-gray-500">Financeiro</p>
+
+                        <p class="text-xs text-gray-500">{{userRole}}</p>
                     </div>
                 </div>
 
-                <button (click)="logout()" title="Sair"
+                <button (click)="signout()" title="Sair"
                     class="p-2 rounded-full text-gray-500 hover:text-white hover:bg-[#f2ab1a] transition duration-150 focus:outline-none focus:ring-2 focus:ring-[#f2ab1a] focus:ring-offset-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">

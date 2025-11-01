@@ -1,0 +1,86 @@
+<div class="space-y-8">
+
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between">
+        <h2 class="text-3xl font-extrabold text-[#001f50]">💹 Carteira de Investimentos</h2>
+        <button (click)="adicionarInvestimento()"
+            class="mt-4 sm:mt-0 px-6 py-2 bg-[#5c9afc] text-white font-semibold rounded-lg shadow-md hover:bg-[#4a83e0] transition duration-150 flex items-center justify-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Adicionar Investimento
+        </button>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#5c9afc]">
+            <p class="text-gray-500 text-sm">Rentabilidade Média Ponderada (Anual)</p>
+            <p class="text-3xl font-extrabold mt-1 text-green-600">
+                {{formatarPorcentagem(rentabilidadeMediaCarteira)}}
+            </p>
+            <p class="text-xs text-gray-500 mt-1">Cálculo baseado no valor total investido.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#5c9afc]">
+            <p class="text-gray-500 text-sm">Valor Total da Carteira</p>
+            <p class="text-3xl font-extrabold mt-1 text-[#001f50]">
+                {{formatarMoeda(valorTotalCarteira)}}
+            </p>
+            <p class="text-xs text-gray-500 mt-1">Soma de todos os ativos listados.</p>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-lg overflow-x-auto">
+        <h3 class="text-xl font-semibold text-[#001f50] mb-4">Detalhamento dos Ativos</h3>
+
+        <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Risco
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo /
+                        Instituição</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor
+                        Investido</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Rentabilidade (a.a.)</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Liquidez
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Vencimento</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+                @for (ativo of ativos; track ativo.id) {
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="flex items-center space-x-2">
+                            <span [ngClass]="getRiscoClass(ativo.risco)" class="w-3 h-3 rounded-full flex-shrink-0">
+                            </span>
+                            <span class="text-sm text-gray-700">{{ativo.risco}}</span>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <p class="text-sm font-medium text-[#001f50]">{{ativo.tipo}}</p>
+                        <p class="text-xs text-gray-500">{{ativo.instituicao}}</p>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-800">
+                        {{formatarMoeda(ativo.valor)}}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-600">
+                        {{formatarPorcentagem(ativo.rentabilidadeAnual)}}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        {{ativo.liquidez}}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        {{ativo.vencimento === 'N/A' ? 'Sem Vencimento' : ativo.vencimento}}
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

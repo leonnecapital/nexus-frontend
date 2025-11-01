@@ -1,0 +1,88 @@
+<div class="space-y-8">
+
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between">
+        <h2 class="text-3xl font-extrabold text-[#001f50]">Perfil do Cliente: {{cliente.nome}}</h2>
+        <button (click)="gerarDiagnostico()"
+            class="mt-4 sm:mt-0 px-6 py-2 bg-[#5c9afc] text-white font-semibold rounded-lg shadow-md hover:bg-[#4a83e0] transition duration-150 flex items-center justify-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 17v-5m6 5v-5m-6 5h.01M9 12h.01M6 16h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v7a2 2 0 002 2z">
+                </path>
+            </svg>
+            Gerar Diagnóstico Automático
+        </button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#5c9afc] sm:flex items-center space-x-6">
+
+        <img [src]="cliente.fotoUrl" [alt]="'Foto de ' + cliente.nome"
+            class="w-24 h-24 rounded-full object-cover border-4 border-gray-100 shadow-md flex-shrink-0 mx-auto sm:mx-0">
+
+        <div class="mt-4 sm:mt-0 text-center sm:text-left">
+            <p class="text-2xl font-bold text-[#001f50]">{{cliente.nome}}</p>
+            <p class="text-gray-600">{{cliente.profissao}}</p>
+            <p class="text-sm text-gray-500 mt-2">
+                Idade: <span class="font-medium">{{cliente.idade}}</span> |
+                E-mail: <span class="font-medium">{{cliente.email}}</span>
+            </p>
+        </div>
+
+        <div class="flex-grow flex justify-center sm:justify-end mt-4 sm:mt-0">
+            <span [ngClass]="getRiscoClass(cliente.nivelRisco)" class="px-4 py-2 text-sm font-bold rounded-full border">
+                Risco: {{cliente.nivelRisco}}
+            </span>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="bg-white p-6 rounded-xl shadow-md border-b-2 border-gray-200">
+            <p class="text-gray-500 text-sm">Receita Mensal</p>
+            <p class="text-2xl font-bold text-green-600 mt-1">{{formatarMoeda(cliente.receitaMensal)}}</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md border-b-2 border-gray-200">
+            <p class="text-gray-500 text-sm">Despesas Fixas</p>
+            <p class="text-2xl font-bold text-red-600 mt-1">{{formatarMoeda(cliente.despesasFixas)}}</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md border-b-2 border-gray-200">
+            <p class="text-gray-500 text-sm">Score Financeiro</p>
+            <p class="text-2xl font-bold text-[#001f50] mt-1">{{cliente.scoreFinanceiro}}</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md border-b-2 border-gray-200">
+            <p class="text-gray-500 text-sm">Patrimônio Total</p>
+            <p class="text-2xl font-bold text-[#001f50] mt-1">{{formatarMoeda(cliente.patrimonioTotal)}}</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md border-b-2 border-gray-200">
+            <p class="text-gray-500 text-sm">Dívidas</p>
+            <p class="text-2xl font-bold text-red-600 mt-1">{{formatarMoeda(cliente.dividas)}}</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md border-b-2 border-gray-200">
+            <p class="text-gray-500 text-sm">Reserva de Emergência</p>
+            <p class="text-2xl font-bold text-green-600 mt-1">{{formatarMoeda(cliente.reservaEmergencia)}}</p>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold text-[#001f50] mb-4">Histórico de Atendimentos</h3>
+
+        <ul class="divide-y divide-gray-200">
+            @for (item of historicoAtendimentos; track item.data) {
+            <li class="py-3 flex justify-between items-center">
+                <div>
+                    <p class="text-gray-800">{{item.resumo}}</p>
+                </div>
+                <span class="text-sm font-medium text-gray-500 flex-shrink-0">{{item.data}}</span>
+            </li>
+            }
+            @empty {
+            <li class="py-3 text-gray-500 italic">Nenhum atendimento registrado.</li>
+            }
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,86 @@
+<div class="space-y-8">
+
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between">
+        <h2 class="text-3xl font-extrabold text-[#001f50]">🎯 Planejamento de Metas</h2>
+        <button (click)="adicionarMeta()"
+            class="mt-4 sm:mt-0 px-6 py-2 bg-[#5c9afc] text-white font-semibold rounded-lg shadow-md hover:bg-[#4a83e0] transition duration-150 flex items-center justify-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Adicionar Meta
+        </button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-lg overflow-x-auto">
+        <h3 class="text-xl font-semibold text-[#001f50] mb-4">Visão Geral das Metas</h3>
+
+        <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Meta</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Prazo
+                        (Meses)</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor
+                        Mensal</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Estratégia Sugerida</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+                @for (meta of metas; track meta.id) {
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-[#001f50]">
+                        {{meta.meta}}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                        {{formatarMoeda(meta.valor)}}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        {{meta.prazoMeses}}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 font-semibold">
+                        {{formatarMoeda(meta.valorMensal)}}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        {{meta.estrategia}}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span [ngClass]="getStatusClass(meta.status)"
+                            class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full">
+                            {{meta.status}}
+                        </span>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold text-[#001f50] mb-6">Progresso Individual das Metas</h3>
+
+        <div class="space-y-6">
+            @for (meta of metas; track meta.id) {
+            <div class="w-full">
+                <div class="flex justify-between mb-1">
+                    <span class="text-sm font-medium text-gray-700">{{meta.meta}}</span>
+                    <span class="text-sm font-medium text-gray-700">{{meta.progresso}}%</span>
+                </div>
+
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div [ngStyle]="{'width': meta.progresso + '%'}"
+                        [ngClass]="meta.progresso === 100 ? 'bg-green-500' : 'bg-[#5c9afc]'"
+                        class="h-2.5 rounded-full transition-all duration-700">
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>

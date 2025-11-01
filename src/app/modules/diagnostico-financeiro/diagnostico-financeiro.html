@@ -1,0 +1,100 @@
+<div class="space-y-8">
+    <h2 class="text-3xl font-extrabold text-[#001f50] mb-6">🧮 Diagnóstico Financeiro Mensal</h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#5c9afc] lg:col-span-1">
+            <h3 class="text-xl font-semibold text-[#001f50] mb-4">Saldo Mensal</h3>
+            <p class="text-sm text-gray-500">Total de Receitas - Total de Despesas</p>
+
+            <p [ngClass]="{'text-green-600': saldoMensal >= 0, 'text-red-600': saldoMensal < 0}"
+                class="text-4xl font-extrabold mt-2">
+                {{formatarMoeda(saldoMensal)}}
+            </p>
+
+            <div class="mt-4">
+                <span class="text-green-500 font-medium text-sm">↑ {{formatarMoeda(totalReceitas)}}</span>
+                <span class="text-gray-400 mx-2">|</span>
+                <span class="text-red-500 font-medium text-sm">↓ {{formatarMoeda(totalDespesas)}}</span>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg lg:col-span-2">
+            <h3 class="text-xl font-semibold text-[#001f50] mb-4">Saúde Financeira</h3>
+
+            <div class="flex items-center space-x-4">
+                <div class="w-full bg-gray-200 rounded-full h-4">
+                    <div [ngStyle]="{'width': saudeFinanceira + '%'}" [ngClass]="getHealthColor()"
+                        class="h-4 rounded-full transition-all duration-500">
+                    </div>
+                </div>
+                <span class="text-xl font-bold text-[#001f50] w-16 text-right">{{saudeFinanceira |
+                    number:'1.0-0'}}%</span>
+            </div>
+
+            <p class="mt-3 text-sm text-gray-600">
+                Uma saúde financeira acima de 80% indica alta capacidade de poupança e baixo risco.
+            </p>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-green-700 mb-4 flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 7h8m0 0v8m0-8l-8 8m-3-4a.5.5 0 11-1 0 .5.5 0 011 0z"></path>
+                </svg>
+                Receitas
+            </h3>
+            <ul class="divide-y divide-gray-200">
+                @for (item of receitas; track item.nome) {
+                <li class="flex justify-between py-2">
+                    <span class="text-gray-700">{{item.nome}}</span>
+                    <span class="text-green-600 font-medium">{{formatarMoeda(item.valor)}}</span>
+                </li>
+                }
+                <li class="flex justify-between py-2 font-bold border-t-2 border-green-200 mt-2 pt-3">
+                    <span class="text-[#001f50]">Total de Receitas</span>
+                    <span class="text-green-700">{{formatarMoeda(totalReceitas)}}</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-red-700 mb-4 flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M11 17l-5-5m0 0l5-5m-5 5h12m-9 4a.5.5 0 11-1 0 .5.5 0 011 0z"></path>
+                </svg>
+                Despesas
+            </h3>
+            <ul class="divide-y divide-gray-200">
+                @for (item of despesas; track item.nome) {
+                <li class="flex justify-between py-2">
+                    <span class="text-gray-700">{{item.nome}}</span>
+                    <span class="text-red-600 font-medium">{{formatarMoeda(item.valor)}}</span>
+                </li>
+                }
+                <li class="flex justify-between py-2 font-bold border-t-2 border-red-200 mt-2 pt-3">
+                    <span class="text-[#001f50]">Total de Despesas</span>
+                    <span class="text-red-700">{{formatarMoeda(totalDespesas)}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold text-[#001f50] mb-4">Observações e Recomendações</h3>
+        <textarea [(ngModel)]="observacoes" rows="5"
+            placeholder="Insira aqui as observações detalhadas e as recomendações financeiras para o cliente..."
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[#5c9afc] focus:border-[#5c9afc] transition focus:outline-none resize-none"></textarea>
+
+        <button
+            class="mt-4 px-6 py-2 bg-[#001f50] text-white font-semibold rounded-lg shadow-md hover:bg-[#1a3a6b] transition duration-150">
+            Salvar Análise
+        </button>
+    </div>
+
+</div>
